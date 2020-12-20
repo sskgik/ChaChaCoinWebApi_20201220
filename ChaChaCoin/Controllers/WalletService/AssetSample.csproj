@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Miyabi.Api" Version="2.1.0" />
+    <PackageReference Include="Miyabi.Asset.Client" Version="2.1.0" />
+    <PackageReference Include="Miyabi.Asset.Models" Version="2.1.0" />
+    <PackageReference Include="Miyabi.ClientSdk" Version="2.1.0" />
+    <PackageReference Include="Miyabi.Common" Version="2.1.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Utility\Utility.csproj" />
+	</ItemGroup>
+ 
+</Project>

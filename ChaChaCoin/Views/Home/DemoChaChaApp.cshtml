@@ -1,0 +1,307 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BrockChain Explorer";
+    Layout = "_Layout2";
+}
+
+
+<style>
+    .jumbotron {
+        height: 270vh;
+        margin-bottom: 60px;
+        margin-top: -15px;
+        background-image: url(../image/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .Demomobilemanualbtn {
+        width: 330px;
+        height: 60px;
+        background-color: yellow;
+        color: black;
+        margin-left:-15px;
+        margin-bottom:20px;
+        border-radius: 10px;
+        border: none;
+        font-size:  1.3em;
+    }
+    /*キーペア発行読み出し画面*/
+    .ChaChaMobileDemotext {
+        background-color: black;
+        position: relative;
+        width: 330px;
+        height: 400px;
+        margin-left: -15px;
+        margin-bottom: 40px;
+    }
+    .input1 {
+        color: yellow;
+        line-height: 10px;
+        font-size: 125%;
+    }
+
+    .keyinfo {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+
+    #registnametext {
+        width: 320px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+
+    #privatekeytext {
+        width: 320px;
+        height: 60px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+
+    #publickeytext {
+        width: 320px;
+        height: 60px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+    .button1 {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 260px;
+        text-align: center;
+    }
+    #Generatebutton {
+        position: relative;
+        width:  250px;
+        height: 55px;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-left: auto;
+        background-color: white;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+        margin-bottom:10px;
+    }
+    #Readbutton {
+        position: relative;
+        width: 250px;
+        height: 55px;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-left: auto;
+        background-color: greenyellow;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+    .QRbutton {
+        position: absolute;
+        left: 10px;
+        bottom: 90px;
+        width: 171px;
+        height: 60px;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 10px 5px;
+        background-color: greenyellow;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+    #lergeqr {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        border: 5px solid;
+        border-color: white;
+    }
+    /*Swap Flame*/
+    .ChaChaMobileSwapDemo {
+        background-color: black;
+        position: relative;
+        margin-left: 2px;
+        margin-bottom: 20px;
+        width: 330px;
+        height: 600px;
+    }
+
+    #swapdeistinationTable {
+        width: 320px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+    #swapdeistination {
+        width: 320px;
+        height: 70px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+    #swapamount1 {
+        width: 320px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+
+    .forswapbutton {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 340px;
+        text-align: center;
+    }
+    #swapbutton {
+        position: relative;
+        width: 145px;
+        height: 45px;
+        font-size: 1em;
+        font-weight: bold;
+        margin-right: auto;
+        background-color: greenyellow;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .swaptransaction {
+        position: absolute;
+        color: white;
+        top: 400px;
+        left: 5px;
+        font-size: 120%;
+    }
+
+    #swaprecent {
+        position: absolute;
+        color: white;
+        top: 430px;
+        left: 5px;
+        font-size: 115%;
+        text-align: left;
+    }
+</style>
+<link rel="stylesheet" href="~/css/DemoChaChaApp.css" />
+<script src="~/js/DemoChaChaApp.js" asp-append-version="true"></script>
+<script src="~/js/qrcode.min.js" asp-append-version="true"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
+
+<!--Page Layout-->
+<input class="Demomobilemanualbtn" type="button" onclick="location.href='https://chal-convenience-info.net/demo-chacha/'" value="デモチャチャ&nbsp;マニュアルへ">
+<div class="ChaChaMobileDemotext">
+    <div class="keyinfo">
+        <form name="inputform">
+           <p class="input1">Regist Name(pkcs12_file Name)</p>
+           <textarea id="registnametext" type="text" name="registname" placeholder="Regist Name"></textarea>
+           <p class="input1">PrivateKey</p>
+           <textarea id="privatekeytext" type="text" name="MyPrivateKey" placeholder="Your PrivateKey" readonly></textarea>
+           <p class="input1">PublicKey</p>
+           <textarea id="publickeytext" type="text" name="MyPublicKey" placeholder="Your PublicKey" readonly></textarea>
+        </form>
+    </div>
+    <div class="button1">
+       <input id="Generatebutton" type="button" onclick="getkeypair()" value="キーペア発行">
+       <input id="Readbutton" type="button" onclick="Readkeypair()" value="キーペア読み出し">
+    </div>
+</div>
+<div class="Demoimage">
+    <div class="ChaChaMobileDemo">
+        <div class="Balance">
+            <button class="balancebutton" type="button" onclick="get_balance()" name="qrreaderbottun">
+                <p class="content1">Your_Balance</p>
+                <p class="content2" id="content2">&nbsp;</p>
+                <p class="content1">ChaChaCoin</p>
+            </button>
+        </div>
+        <div class="ChaChaCoin">
+            <img src="~/image/DemoChaCha.png" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+        <!--入力フォーム-->
+        <div class="sendinfomation">
+            <form id="inputform" name="scanresult">
+                <p class="input">送金先</p>
+                <textarea id="deistination" type="text" name="Destinationpubkey" placeholder="Destination PublicKey"></textarea><label class=qrcode-text-btn><input class="accesscamera" type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex="-1"></label>
+                <p class="input">送金枚数</p>
+                <textarea id="amount1" type="text" name="Amount" placeholder="amount"></textarea>
+            </form>
+        </div>
+        <!--各種button-->
+        <div class="button">
+            <input id="clearbutton" type="button" onclick="clearinput()" value="Clear Input(消去)">
+            <input id="sendbutton" type="button" onclick="send()" value="Send(送金)">
+        </div>
+        <!--Reacent transaction-->
+        <p class="showtransaction">Recent&nbsp;&nbsp;Transaction</p>
+        <!--Recrnt Table-->
+        <table id="recent">
+            <tbody id="recentTable">
+                <tr>
+                    <td id="date">Send_Date</td>
+                    <td id="amount">Amount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Swap Flame-->
+    <div class="ChaChaMobileSwapDemo">
+        <div class="Balance">
+            <button class="balancebutton" type="button" onclick="get_balance()" name="qrreaderbottun">
+                <p class="content1">Your_Balance</p>
+                <p class="content2" id="content3">&nbsp;</p>
+                <p class="content1">ChaChaCoin</p>
+            </button>
+        </div>
+        <div class="ChaChaCoin">
+            <img src="~/image/DemoChaCha.png" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+        <!--入力フォーム-->
+        <div class="sendinfomation">
+            <form id="swapinputform" name="swapresult">
+                <p class="input">スワップ先コイン</p>
+                <textarea id="swapdeistinationTable" type="text" name="SwapDestinationTable" placeholder="Destination PublicKey">SAKURAcoin</textarea>
+                <p class="input">スワップアドレス</p>
+                <textarea id="swapdeistination" type="text" name="SwapDestinationpubkey" placeholder="Swqp Destination PublicKey" readonly></textarea>
+                <p class="input">スワップ枚数</p>
+                <textarea id="swapamount1" type="text" name="SwapAmount" placeholder="amount"></textarea>
+            </form>
+        </div>
+        <!--各種button-->
+        <div class="forswapbutton">
+            <input id="clearbutton" type="button" onclick="clearSwapinput()" value="Clear Input(消去)">
+            <input id="swapbutton" type="button" onclick="Swap()" value="Swap(交換)">
+        </div>
+        <!--Reacent transaction-->
+        <p class="swaptransaction">Recent&nbsp;Swap&nbsp;Transaction</p>
+        <!--Recrnt Table-->
+        <table id="swaprecent">
+            <tbody id="swaprecentTable">
+                <tr>
+                    <td id="date">Swap_Date</td>
+                    <td id="amount">Swap_Amount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--largeQR image-->
+    <div class="ChaChaMobileDemoQR">
+        <div class="ChaChaCoin">
+            <img src="~/image/DemoChaCha.png" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+
+        <div id="lergeqr"></div>
+        <input class="storageclear" type="button" onclick="localclear()" value="ローカルクリア">
+        <button class="QRbutton" type="button" onclick="lergeQR()" name="QR">QR作成</button>
+    </div>
+</div>

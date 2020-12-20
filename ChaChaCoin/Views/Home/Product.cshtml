@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Product";
+    Layout = "_Layout2";
+}
+
+<style>
+    .jumbotron {
+        height:   300px;
+        margin-bottom: 60px;
+        margin-top: -15px;
+        background-image: url(../image/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+<link rel="stylesheet" href="~/css/Product.css" />
+<body>
+    <!--背景画像セット-->
+    <div>
+        <div class="down text-center">
+            <h1 class="display-4">Wallets</h1>
+        </div>
+    </div>
+    <!--ここから下部プロダクトイメージの配置-->
+    <div class="block">
+        <div class="reference">
+            <div>
+                <p class="strSize text-center">ChaChaWallet -Windows-</p>
+                <img class="ChaChaWallet" src="~/image/ChaChaWallet.jpg" title="ChaChaWallet" alt="ChaChaWalletImg" />
+            </div>
+            <div>
+                <p class="strSize text-center">ChaChaMobile</p>
+                <img class="ChaChaMobile" src="~/image/ChaChaMobile.jpg" title="ChaChaMobile" alt="ChaChaMobileImg" />
+            </div>
+        </div>
+
+        <div class="Installer">
+            <div>
+                <img class="WindowsInstaller" src="~/image/window.jpg" title="WindowsInstaller" alt="WindowsInstaller" />
+                <a class="strSizeInstaller text-center" href="https://github.com/sskgik/ChaChaWallet_32bit/archive/master.zip">&nbsp;&nbsp;32bit_Type&nbsp;&nbsp;</a><a class="strSizeInstaller text-center" href="https://github.com/sskgik/ChaChaWallet_64bit/archive/master.zip">&nbsp;&nbsp;64bit_Type&nbsp;&nbsp;</a>
+            </div>
+            <div>
+                <a href= "https://github.com/sskgik/ChaChaMobileAndroidv1_2_0/blob/master/ChaChaMobilev1_2_0.apk" ><img class="AndroidInstaller" src="~/image/android.jpeg" title="AndroidInstaller" alt="AndroidInstaller" /></a>
+                <a class="strSizeInstaller text-center" href="https://github.com/sskgik/ChaChaMobileAndroidv1_2_0/blob/master/ChaChaMobilev1_2_0.apk">Android</a>
+            </div>
+            <div>
+                <a href=""><img class="IOSInstaller" src="~/image/apple.jpeg" title="IOSInstaller" alt="IOSInstaller" /></a>
+                <a class="strSizeInstaller text-center" href="">IOS</a>
+            </div>
+        </div>
+        <p class="strinfosize text-center">各種インストーラご使用の環境に合わせてウォレットアプリのインストールをお願いします！</p>
+        <div class="manualbuttpn">
+            <input class="winmanualbtn" type="button" onclick="location.href='http://chal-convenience-info.net/chachawallet/'" value="チャチャウォレット&nbsp;マニュアルへ">
+            <input class="mobilemanualbtn" type="button" onclick="location.href='http://chal-convenience-info.net/chachamobile/'" value="チャチャモバイル&nbsp;マニュアルへ">
+        </div>
+    </div>
+</body>

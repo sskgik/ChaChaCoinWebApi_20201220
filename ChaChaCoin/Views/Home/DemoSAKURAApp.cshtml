@@ -1,0 +1,133 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BrockChain Explorer";
+    Layout = "_Layout2";
+}
+
+
+<style>
+    .jumbotron {
+        height:  270vh;
+        margin-bottom: 60px;
+        margin-top: -15px;
+        background-image: url(../image/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+<link rel="stylesheet" href="~/css/DemoSAKURAApp.css" />
+<script src="~/js/DemoSAKURAApp.js" asp-append-version="true"></script>
+<script src="~/js/qrcode.min.js" asp-append-version="true"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
+
+<!--Page Layout-->
+<input class="Demomobilemanualbtn" type="button" onclick="location.href='https://chal-convenience-info.net/demo-chacha/'" value="デモチャチャ&nbsp;マニュアルへ">
+<div class="ChaChaMobileDemotext">
+    <div class="keyinfo">
+        <form name="inputform">
+            <p class="input1">Regist Name(pkcs12_file Name)</p>
+            <textarea id="registnametext" type="text" name="registname" placeholder="Regist Name"></textarea>
+            <p class="input1">PrivateKey</p>
+            <textarea id="privatekeytext" type="text" name="MyPrivateKey" placeholder="Your PrivateKey" readonly></textarea>
+            <p class="input1">PublicKey</p>
+            <textarea id="publickeytext" type="text" name="MyPublicKey" placeholder="Your PublicKey" readonly></textarea>
+        </form>
+    </div>
+    <div class="button1">
+        <input id="Generatebutton" type="button" onclick="getkeypair()" value="キーペア発行">
+        <input id="Readbutton" type="button" onclick="Readkeypair()" value="キーペア読み出し">
+    </div>
+</div>
+<div class="Demoimage">
+    <div class="ChaChaMobileDemo">
+        <div class="Balance">
+            <button class="balancebutton" type="button" onclick="get_balance()" name="qrreaderbottun">
+                <p class="content1">Your_Balance</p>
+                <p class="content2" id="content2">&nbsp;</p>
+                <p class="content1">ChaChaCoin</p>
+            </button>
+        </div>
+        <div class="SAKURACoin">
+            <img src="~/image/SAKURA.jpg" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+        <!--入力フォーム-->
+        <div class="sendinfomation">
+            <form id="inputform" name="scanresult">
+                <p class="input">送金先</p>
+                <textarea id="deistination" type="text" name="Destinationpubkey" placeholder="Destination PublicKey"></textarea><label class=qrcode-text-btn><input class="accesscamera" type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex="-1"></label>
+                <p class="input">送金枚数</p>
+                <textarea id="amount1" type="text" name="Amount" placeholder="amount"></textarea>
+            </form>
+        </div>
+        <!--各種button-->
+        <div class="button">
+            <input id="clearbutton" type="button" onclick="clearinput()" value="Clear Input(消去)">
+            <input id="sendbutton" type="button" onclick="send()" value="Send(送金)">
+        </div>
+        <!--Reacent transaction-->
+        <p class="showtransaction">Recent&nbsp;&nbsp;Transaction</p>
+        <!--Recrnt Table-->
+        <table id="recent">
+            <tbody id="recentTable">
+                <tr>
+                    <td id="date">Send_Date</td>
+                    <td id="amount">Amount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Swap Flame-->
+    <div class="ChaChaMobileSwapDemo">
+        <div class="Balance">
+            <button class="balancebutton" type="button" onclick="get_balance()" name="qrreaderbottun">
+                <p class="content1">Your_Balance</p>
+                <p class="content2" id="content3">&nbsp;</p>
+                <p class="content1">ChaChaCoin</p>
+            </button>
+        </div>
+        <div class="SAKURACoin">
+            <img src="~/image/SAKURA.jpg" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+        <!--入力フォーム-->
+        <div class="sendinfomation">
+            <form id="swapinputform" name="swapresult">
+                <p class="input">スワップ先コイン</p>
+                <textarea id="swapdeistinationTable" type="text" name="SwapDestinationTable" placeholder="Destination PublicKey">ChaChaCoin</textarea>
+                <p class="input">スワップアドレス</p>
+                <textarea id="swapdeistination" type="text" name="SwapDestinationpubkey" placeholder="Swqp Destination PublicKey" readonly></textarea>
+                <p class="input">スワップ枚数</p>
+                <textarea id="swapamount1" type="text" name="SwapAmount" placeholder="amount"></textarea>
+            </form>
+        </div>
+        <!--各種button-->
+        <div class="forswapbutton">
+            <input id="clearbutton" type="button" onclick="clearSwapinput()" value="Clear Input(消去)">
+            <input id="swapbutton" type="button" onclick="Swap()" value="Swap(交換)">
+        </div>
+        <!--Reacent transaction-->
+        <p class="swaptransaction">Recent&nbsp;Swap&nbsp;Transaction</p>
+        <!--Recrnt Table-->
+        <table id="swaprecent">
+            <tbody id="swaprecentTable">
+                <tr>
+                    <td id="date">Swap_Date</td>
+                    <td id="amount">Swap_Amount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--largeQR image-->
+    <div class="ChaChaMobileDemoQR">
+        <div class="SAKURACoin">
+            <img src="~/image/SAKURA.jpg" width="90" height="90" alt="ChaChaCoinの画像">
+        </div>
+
+        <div id="lergeqr"></div>
+        <input class="storageclear" type="button" onclick="localclear()" value="ローカルクリア">
+        <button class="QRbutton" type="button" onclick="lergeQR()" name="QR">QR作成</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿.twbtn {
+    width:  400px;
+    height: 50px;
+    background-color: #FFFFFF;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twitter-follow-button{    
+    margin-right:10px;
+}
+.twitter-dm-button {
+    margin-left: 10px;
+}

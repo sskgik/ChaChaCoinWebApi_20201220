@@ -1,0 +1,133 @@
+﻿body {
+    height: 100%; 
+    width: 100%;
+}
+.down{
+     position: relative;
+     top:  40px;
+}
+.block {
+    position: relative;
+    top: 210px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.reference {
+    left: 10px;
+    right: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -60px -30px -60px -10px;
+}
+.reference div{
+   margin:  60px 30px 60px  10px; 
+}
+/*ChaChaWalletIMG*/
+.ChaChaWallet {
+    max-width: 700px;
+    max-height: 485px;
+    width: 100%;
+    height: 109%;
+    min-width: 220px;
+    min-height: 150px;
+    border: 2px solid black;
+}
+ /*ChaChaMobileIMG*/
+.ChaChaMobile {
+    max-height: 485px;
+    width: 100%;
+    height: 102%;
+    min-width: 220px;
+    min-height: 260px;
+    border: 2px solid black;
+}
+p.strSize {
+    font-size:  2.0rem;
+}
+/*Under Installer*/
+.Installer{
+    left:  20px;
+    right: 10px;
+    width: 100%;
+    height: 100%;
+    min-width: 270px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px -30px -30px -30px;
+}
+
+.AndroidInstaller{
+    height: 100%;
+    width:  100%;
+    min-width:  100%;
+}
+
+.WindowsInstaller {
+    height: 100%;
+    width: 100%;
+    min-width:  100%;
+}
+
+.IOSInstaller {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.Installer div {
+    width: 250px;
+    height: 250px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 30px 30px 30px 30px;
+}
+
+p.strSizeInstaller{
+        font-size: 1rem;
+}
+/*インストーラ説明*/
+p.strinfosize{
+    margin-top:60px;
+    font-size:  1.7rem;
+}
+/*マニュアルボタン*/
+.manualbuttpn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:   10px -10px 80px -15px;
+}
+/*ウィンドウズボタン*/
+.winmanualbtn {
+    width: 300px;
+    height: 50px;
+    min-width: 225px;
+    min-height: 50px;
+    background-color: paleturquoise;
+    color: black;
+    margin: 10px  10px 0px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 100%;
+}
+.mobilemanualbtn {
+    width: 300px;
+    height: 50px;
+    min-width: 225px;
+    min-height: 50px;
+    background-color: paleturquoise;
+    color: black;
+    margin: 10px 10px 0px 15px;
+    border-radius: 10px;
+    border:none;
+    font-size: 100%;
+}
+

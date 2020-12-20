@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@@ChaChaWalletJP" />
+    <meta name="twitter:title" content="仮想通貨ChaChaCoin">
+    <meta name="twitter:description" content="ブロックチェーンによるエンターテイメント領域でのイノベーションを目指して">
+    <meta name="twitter:image" content="https://chachacoin.net/image/ChaChaLogo.jpg">
+    <title>@ViewData["Title"] - ChaChaCoin</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ChaChaCoin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Developer">Developer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="DemoChaChaApp">DemoChaChaApp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="DemoSAKURAApp">DemoSAKURAApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="border-top footer text-muted">
+        <div class="container-fluid text-center">
+            <a class="text-center" asp-area="" asp-controller="Home" asp-action="index">Home</a>
+        </div>
+        <a class="snstlogo" href="https://twitter.com/ChaChaWalletJP"><i class="fab fa-twitter-square fa-3x" style="color:black"></i></a>
+        <a class="snsglogo" href="https://github.com/sskgik?tab=repositories"><i class="fab fa-github-square fa-3x" style="color:black"></i></a>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>   
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

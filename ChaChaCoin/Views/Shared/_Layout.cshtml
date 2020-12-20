@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@@ChaChaWalletJP" /> 
+    <meta name="twitter:title" content="仮想通貨ChaChaCoin">
+    <meta name="twitter:description" content="ブロックチェーンによるエンターテイメント領域でのイノベーションを目指して">
+    <meta name="twitter:image" content="https://chachacoin.net/image/ChaChaLogo.jpg">
+    <title>@ViewData["Title"] - ChaChaCoin</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ChaChaCoin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="Developer">Developer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="DemoChaChaApp">DemoChaChaApp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray" asp-area="" asp-controller="Home" asp-action="DemoSAKURAApp">DemoSAKURAApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img src="~/image/ChaChalogheader.png" title=" ChaChaCoin" alt="ChaChaCoinimg" />
+        </nav>
+    </header>
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <!-- Page Wrap -->
+    <div class="page-wrap ">
+        <div id="home-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-one">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+                                <h1><span class="emphasis">Transaction&nbsp;Speed</span>. <br><span>-ChaChaCoin-<br>with Miyabi</span></h1>
+                                <p class="chapter">Chapter I, page XV</p>
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                                <ul class="graf">
+                                    <li style="background:#E46C82;width:5%;">
+                                        Bitcoin:4case/sec
+                                    </li>
+
+                                    <li style="background:#0D0D0D;width:10%;">
+                                        Ethereum:9case/sec
+                                    </li>
+
+                                    <li style="background: #ffd800;width:25%;">
+                                        OtherCoin:1000case/sec
+                                    </li>
+
+                                    <li style="background:#3EAC00;width:90%;">
+                                        ChaCha(-on Miyabi-):4000case/sec
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-two">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                                <h1>The&nbsp;<span class="emphasis">Private</span>. <br><span>BlockChain</span></h1>
+                                <p class="chapter">Chapter II, page VII</p>
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                                <h2 style="color:white; font-size: 1.6vw;">The&nbsp;Feature&nbsp;Of&nbsp;ChaChaCoin's&nbsp;BlockChain</h2>
+                                <p class="paragraph">・優れたプライバシー保護性能</p>
+                                <p class="paragraph">・高いビザンチン耐性（BFT）</p>
+                                <p class="paragraph">・カスタマイズの柔軟性 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-スマートコントラクト-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-three">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+                                <h1>The <span class="emphasis">Future</span>. <br><span>Of Our Development.</span></h1>
+                                <p class="chapter">Chapter III, page XI</p>
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+                                <p class="paragraph" style="background-color:black">・エンターテイメント領域<br>&nbsp;&nbsp;(KYC&電子チケットの統合)</p>
+                                <p class="paragraph" style="background-color:black">・ブロックチェーンゲーム</p>
+                                <p class="paragraph" style="background-color:black">・ブロックチェーン&nbsp;✖️&nbsp;IOT</p>
+                                <p class="paragraph" style="background-color:black">・メディカルソリューション</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+     <!--For example Use Case-->
+    <h2 class="text-center">-Use&nbsp;Case-</h2>
+    <div class="contact1">
+        <img class="ChaChaPoint" src="~/image/ChaChaPoint.jpg" title="ChaChaPoint" alt="ChaChaPointimg" />
+        <div style="flex-wrap:wrap; margin:auto 0px auto 10px">
+            <h3 class="text-center" style="color:white">-Area&nbsp;​of&nbsp;​Activity-</h3>
+            <p class="chachainfo">
+                ・ネット通販の独自ポイントシステム<br>・コミュニティ性独自通貨<br>・アーティストライブでのギフティング（投げ銭）
+            </p>
+        </div>
+    </div>
+    <!--Introduction-->
+    <h2 class="text-center">-Introduction-</h2>
+    <div class="contact">
+        <img class="miyabi" src="~/image/miyabi.png" title="Miyabi" alt="Miyabiimg" />
+        <div style="flex-wrap:wrap; margin:auto 0px auto 10px">
+            <h3 class="text-center" style="color:white">-About&nbsp;miyabi-</h3>
+            <p class="miyabiinfo">
+                ・Developer&nbsp;:&nbsp;Bitflyer Blockchain,Inc<br>・ConsensusAlgorithm&nbsp;:&nbsp;BFK2<br>
+                ・Area of ​​Activity&nbsp;:&nbsp;So many!!
+            </p>
+            <input class="aboutmiyabibtn" type="button" onclick="location.href='https://blockchain.bitflyer.com/miyabi/index.html'" value="miyabiのサイトにジャンプ">
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="border-top footer text-muted">
+        <div class="container-fluid text-center">
+            <a class="text-center" asp-area="" asp-controller="Home" asp-action="index">Home</a>
+        </div>
+        <a class="snstlogo" href="https://twitter.com/ChaChaWalletJP"><i class="fab fa-twitter-square fa-3x" style="color:black"></i></a>
+        <a class="snsglogo" href="https://github.com/sskgik?tab=repositories"><i class="fab fa-github-square fa-3x" style="color:black"></i></a>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

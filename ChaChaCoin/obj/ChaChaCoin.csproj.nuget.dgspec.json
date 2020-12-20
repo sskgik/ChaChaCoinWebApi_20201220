@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sasakigaiki\\Desktop\\ChaChaCoin\\ChaChaCoin\\ChaChaCoin.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sasakigaiki\\Desktop\\ChaChaCoin\\ChaChaCoin\\ChaChaCoin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sasakigaiki\\Desktop\\ChaChaCoin\\ChaChaCoin\\ChaChaCoin.csproj",
+        "projectName": "ChaChaCoin",
+        "projectPath": "C:\\Users\\sasakigaiki\\Desktop\\ChaChaCoin\\ChaChaCoin\\ChaChaCoin.csproj",
+        "packagesPath": "C:\\Users\\sasakigaiki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sasakigaiki\\Desktop\\ChaChaCoin\\ChaChaCoin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sasakigaiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\sasakigaiki\\AppData\\Local\\Temp\\sdk": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Miyabi.Api": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Asset.Client": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Asset.Models": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.ClientSdk": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Common": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Cryptography.BouncyCastle": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Cryptography.Secp256k1": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.Hash.BouncyCastle": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.ModelSdk": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.NFT.Client": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Miyabi.NFT.Models": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Runtime.Serialization.Json": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
